@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationMetrics.MetricLoggers.MongoDb", "ApplicationMetrics.MetricLoggers.MongoDb\ApplicationMetrics.MetricLoggers.MongoDb.csproj", "{6AD3737D-8E6F-4213-B1F1-2900D20639D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationMetrics.MetricLoggers.MongoDb.UnitTests", "ApplicationMetrics.MetricLoggers.MongoDb.UnitTests\ApplicationMetrics.MetricLoggers.MongoDb.UnitTests.csproj", "{DE32FF09-B8F8-4B37-87B0-F7C08A2FDADA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationMetrics.MetricLoggers.MongoDb.IntegrationTests", "ApplicationMetrics.MetricLoggers.MongoDb.IntegrationTests\ApplicationMetrics.MetricLoggers.MongoDb.IntegrationTests.csproj", "{D90E05BB-D66B-4D19-9463-90D61D5992A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AD3737D-8E6F-4213-B1F1-2900D20639D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD3737D-8E6F-4213-B1F1-2900D20639D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD3737D-8E6F-4213-B1F1-2900D20639D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD3737D-8E6F-4213-B1F1-2900D20639D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE32FF09-B8F8-4B37-87B0-F7C08A2FDADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE32FF09-B8F8-4B37-87B0-F7C08A2FDADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE32FF09-B8F8-4B37-87B0-F7C08A2FDADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE32FF09-B8F8-4B37-87B0-F7C08A2FDADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90E05BB-D66B-4D19-9463-90D61D5992A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90E05BB-D66B-4D19-9463-90D61D5992A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90E05BB-D66B-4D19-9463-90D61D5992A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90E05BB-D66B-4D19-9463-90D61D5992A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51BE1937-E4ED-4692-89DA-C0A0C7789987}
+	EndGlobalSection
+EndGlobal
