@@ -40,6 +40,16 @@ The MongoDbMetricLogger class accepts the following constructor parameters...
 | intervalMetricBaseTimeUnit | The base time unit to use to log interval metrics. |
 | intervalMetricChecking | Specifies whether an exception should be thrown if the correct order of interval metric logging is not followed (e.g. End() method called before Begin()).  Note that this parameter only has an effect when running in 'non-interleaved' mode. |
 
+#### Storage
+4 collections are created in the specified MongoDB database, which store the metrics...
+
+| Collection Name |
+| --------------- |
+| CountMetricInstances |
+| AmountMetricInstances |
+| StatusMetricInstances |
+| IntervalMetricInstances |
+
 #### Non-interleaved Method Overloads
 Methods which support ['non-interleaved' interval metric logging](https://github.com/alastairwyse/ApplicationMetrics#interleaved-interval-metrics) (i.e. overloads of End() and CancelBegin() methods which _don't_ accept a Guid) will be deprecated in a future version of ApplicationMetrics.  Hence it's recommended to only use the End() and CancelBegin() method overloads which accept a 'beginId' Guid parameter.
 

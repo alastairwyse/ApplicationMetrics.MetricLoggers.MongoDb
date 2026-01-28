@@ -21,7 +21,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace ApplicationMetrics.MetricLoggers.MongoDb.Models.Documents
 {
     /// <summary>
-    /// Base for MongoDB documents which store a instances of a metrics.
+    /// Base for MongoDB documents which store instances of a metrics.
     /// </summary>
     public abstract class MetricInstancesDocumentBase
     {
