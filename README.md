@@ -50,6 +50,28 @@ The MongoDbMetricLogger class accepts the following constructor parameters...
 | StatusMetricInstances |
 | IntervalMetricInstances |
 
+Note that timestamps in MongoDB have only millisecond precision by default, hence metric events timestamps are stored in 2 properties in each document, as per the below table...
+
+| Property Name | Contents |
+| ------------- | -------- |
+| EventTime | The timestamp of the event as a UTC [BSON Date](https://www.mongodb.com/docs/manual/reference/bson-types/#date) (to the closest millisecond). |
+| EventTimeTicks | The timestamp of the event as the number of [Ticks](https://learn.microsoft.com/en-us/dotnet/api/system.datetime.ticks?view=net-10.0) elapsed since January 1, 0001 at 00:00:00.000 UTC.  In .NET this can be converted to a DateTime by passing to the [relevent DateTime constructor overload](https://learn.microsoft.com/en-us/dotnet/api/system.datetime.-ctor?view=net-10.0#system-datetime-ctor(system-int64)). |
+
+An example of event timestamps queried from MongoDB is as follows...
+
+```
+{
+	"_id" : ObjectId("6979616fd47069ae771e0141"),
+	"Category" : "DefaultCategory",
+	"EventTime" : ISODate("2026-01-28T01:07:59.112Z"),
+	"EventTimeTicks" : Long("639051592791127525"),
+	"AmountMetric" : "DiskBytesRead",
+	"Amount" : Long("2048")
+}
+```
+ 
+Storing metric event timestamps using both properties gives both readability, and complete precision/accuracy.
+
 #### Non-interleaved Method Overloads
 Methods which support ['non-interleaved' interval metric logging](https://github.com/alastairwyse/ApplicationMetrics#interleaved-interval-metrics) (i.e. overloads of End() and CancelBegin() methods which _don't_ accept a Guid) will be deprecated in a future version of ApplicationMetrics.  Hence it's recommended to only use the End() and CancelBegin() method overloads which accept a 'beginId' Guid parameter.
 
